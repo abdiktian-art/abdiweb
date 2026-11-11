@@ -18,24 +18,39 @@
 
     <!-- NAVBAR -->
     <header class="header">
-        <nav class="navbar" aria-label="Navigasi utama">
+    <nav class="navbar" aria-label="Navigasi utama">
 
-            <a href="#home" class="logo">
-                ABDI<span>WEB.</span>
-            </a>
+        <a href="#home" class="logo">
+            ABDI<span>WEB.</span>
+        </a>
 
-            <ul class="menu">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="about.html">Tentang Kami</a></li>
-                <li><a href="#layanan">Layanan</a></li>
-                <li><a href="#portofolio">Portofolio</a></li>
-                <li><a href="#harga">Harga</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-            </ul>
+        <!-- Tombol menu hamburger -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Buka menu navigasi"
+            aria-expanded="false"
+            aria-controls="mainMenu">
 
-        </nav>
-    </header>
+            <span></span>
+            <span></span>
+            <span></span>
 
+        </button>
+
+        <!-- Menu navigasi -->
+        <ul class="menu" id="mainMenu">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#portofolio">Portofolio</a></li>
+            <li><a href="#harga">Harga</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+
+    </nav>
+</header>
 
     <main>
 
@@ -548,6 +563,31 @@
         </div>
 
     </footer>
+    <script>
+    // Menu hamburger ABDIWEB
+const menuToggle = document.getElementById("menuToggle");
+const mainMenu = document.getElementById("mainMenu");
+
+menuToggle.addEventListener("click", function () {
+    const isOpen = mainMenu.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"
+    );
+});
+
+// Tutup menu setelah salah satu link dipilih
+mainMenu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        mainMenu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Buka menu navigasi");
+    });
+});
+</script>
 
 </body>
 </html>
