@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ABDIWEB | Jasa Pembuatan Website Profesional</title>
+
+<meta name="description"
+content="ABDIWEB menyediakan jasa pembuatan website profesional, modern, dan responsif untuk bisnis Anda.">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    background: rgba(8, 20, 42, .97);
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px #00000020;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(8, 20, 42, .94),
+            rgba(3, 105, 161, .76)
+        ),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600")
+        center/cover no-repeat;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 8%;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero span {
+    color: #38bdf8;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 49px;
+    line-height: 1.2;
+    margin: 22px 0;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: 0 auto 35px;
+    color: #dbeafe;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #08203b;
+    padding: 14px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+    box-shadow: 0 5px 20px #38bdf840;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+/* GENERAL SECTION */
+
+section {
+    padding: 85px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading span {
+    color: #0284c7;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    color: #0f172a;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #64748b;
+}
+
+/* ABOUT */
+
+.about {
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff,
+            #eff6ff
+        );
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px #0f172a20;
+}
+
+.about-content span {
+    color: #0284c7;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    color: #0f172a;
+    margin: 12px 0 20px;
+}
+
+.about-content p {
+    color: #64748b;
+    margin-bottom: 17px;
+}
+
+/* SERVICES */
+
+.services {
+    background:
+        linear-gradient(
+            135deg,
+            #e0f2fe,
+            #f8fafc,
+            #eff6ff
+        );
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.service-card {
+    background: white;
+    padding: 35px 27px;
+    border-radius: 16px;
+    border: 1px solid #e0f2fe;
+    box-shadow: 0 8px 25px #0f172a0b;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 15px 35px #0284c720;
+}
+
+.service-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0f2fe;
+    border-radius: 14px;
+    font-size: 32px;
+    margin-bottom: 22px;
+}
+
+.service-card h3 {
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.service-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ADVANTAGES */
+
+.advantages {
+    background: white;
+}
+
+.advantage-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.advantage-card {
+    padding: 30px 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #f8fafc;
+    transition: .3s;
+}
+
+.advantage-card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-5px);
+}
+
+.advantage-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.advantage-card h3 {
+    color: #0369a1;
+    margin-bottom: 10px;
+}
+
+.advantage-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* CTA BANNER */
+
+.cta {
+    background:
+        linear-gradient(
+            120deg,
+            rgba(8, 20, 42, .95),
+            rgba(3, 105, 161, .86)
+        ),
+        url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600")
+        center/cover no-repeat;
+
+    text-align: center;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #dbeafe;
+    margin-bottom: 30px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #eff6ff;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #0f172a;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.contact p {
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #020617;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 38px 8%;
+    font-size: 13px;
+}
+
+footer h2 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+footer p {
+    margin-top: 7px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    header {
+        justify-content: center;
+        gap: 15px;
+        padding: 16px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 85px 6%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .about-content h2 {
+        font-size: 29px;
+    }
+
+    .service-container,
+    .advantage-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .cta h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">ABDIWEB.</div>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<div class="hero" id="beranda">
+
+    <div class="hero-content">
+
+        <span>SOLUSI DIGITAL PROFESIONAL</span>
+
+        <h1>
+            Bangun Identitas Digital
+            untuk Bisnis Anda
+        </h1>
+
+        <p>
+            ABDIWEB membantu bisnis dan perusahaan
+            berkembang melalui website modern,
+            profesional, dan responsif.
+        </p>
+
+        <a href="#kontak" class="btn">
+            Konsultasi Sekarang →
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section class="about" id="tentang">
+
+    <div class="about-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1000"
+        alt="Lingkungan kerja profesional"
+        loading="lazy">
+
+    </div>
+
+    <div class="about-content">
+
+        <span>TENTANG KAMI</span>
+
+        <h2>
+            Solusi Website Modern
+            untuk Masa Depan Bisnis
+        </h2>
+
+        <p>
+            ABDIWEB merupakan layanan jasa pembuatan
+            website profesional yang membantu bisnis,
+            perusahaan, dan pelaku usaha membangun
+            identitas digital.
+        </p>
+
+        <p>
+            Kami berkomitmen menghadirkan solusi website
+            modern, responsif, dan mudah digunakan
+            sesuai kebutuhan pelanggan.
+        </p>
+
+        <a href="#layanan" class="btn">
+            Jelajahi Layanan
+        </a>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="layanan">
+
+    <div class="section-heading">
+
+        <span>LAYANAN KAMI</span>
+
+        <h2>Solusi Digital untuk Bisnis Anda</h2>
+
+        <p>
+            Kami menyediakan berbagai layanan
+            untuk membantu perkembangan bisnis
+            di era digital.
+        </p>
+
+    </div>
+
+    <div class="service-container">
+
+        <div class="service-card">
+
+            <div class="service-icon">🌐</div>
+
+            <h3>Web Development</h3>
+
+            <p>
+                Pembuatan website profesional,
+                modern, dan responsif untuk
+                kebutuhan bisnis Anda.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <div class="service-icon">📈</div>
+
+            <h3>Digital Marketing</h3>
+
+            <p>
+                Membantu meningkatkan jangkauan
+                bisnis melalui strategi pemasaran
+                digital.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <div class="service-icon">💻</div>
+
+            <h3>IT Consulting</h3>
+
+            <p>
+                Konsultasi teknologi informasi
+                untuk mendukung kebutuhan
+                digital perusahaan.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ADVANTAGES -->
+
+<section class="advantages" id="keunggulan">
+
+    <div class="section-heading">
+
+        <span>KEUNGGULAN KAMI</span>
+
+        <h2>Mengapa Memilih ABDIWEB?</h2>
+
+        <p>
+            Kami mengutamakan kualitas,
+            kemudahan, dan pengalaman pengguna.
+        </p>
+
+    </div>
+
+    <div class="advantage-container">
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">🎨</div>
+
+            <h3>Desain Modern</h3>
+
+            <p>
+                Tampilan website menarik,
+                profesional, dan sesuai
+                identitas bisnis.
+            </p>
+
+        </div>
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">📱</div>
+
+            <h3>Responsif</h3>
+
+            <p>
+                Website dapat diakses dengan
+                nyaman melalui laptop,
+                tablet, maupun handphone.
+            </p>
+
+        </div>
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">⚡</div>
+
+            <h3>Mudah Digunakan</h3>
+
+            <p>
+                Navigasi sederhana sehingga
+                pengunjung mudah menemukan
+                informasi.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>
+        Saatnya Bisnis Anda Go Digital!
+    </h2>
+
+    <p>
+        Bangun website profesional bersama
+        ABDIWEB dan kembangkan bisnis Anda.
+    </p>
+
+    <a href="#kontak" class="btn">
+        Mulai Konsultasi →
+    </a>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="kontak">
+
+    <h2>
+        Siap Mengembangkan Bisnis Anda?
+    </h2>
+
+    <p>
+        Hubungi ABDIWEB dan mulai bangun
+        identitas digital bisnis Anda.
+    </p>
+
+    <a
+    href="https://wa.me/6281281234840?text=Halo%20ABDIWEB,%20saya%20ingin%20konsultasi%20pembuatan%20website."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn">
+
+        Hubungi Kami via WhatsApp
+
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>ABDIWEB.</h2>
+
+    <p>
+        Solusi Digital Profesional untuk Bisnis Anda.
+    </p>
+
+    <p>
+        © 2026 ABDIWEB. All Rights Reserved.
+    </p>
+
+    <p>
+        Website Company Profile by ABDIWEB
+    </p>
+
+</footer>
+
+</body>
+</html>

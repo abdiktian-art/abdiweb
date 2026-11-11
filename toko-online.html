@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ABDI STORE | Belanja Online</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: #0f172a;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+
+.hero {
+    background:
+    linear-gradient(120deg,
+    rgba(15,23,42,.96),
+    rgba(3,105,161,.85)),
+    url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 115px 8%;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #e2e8f0;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 13px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* BENEFIT */
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px 8%;
+    background: white;
+}
+
+.benefit {
+    text-align: center;
+    padding: 15px;
+}
+
+.benefit h3 {
+    color: #0369a1;
+    margin-bottom: 5px;
+}
+
+/* SECTION */
+
+section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.section-desc {
+    color: #64748b;
+}
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #0000000d;
+    transition: .3s;
+    border: 1px solid #e2e8f0;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px #00000015;
+}
+
+.product-image {
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0f2fe;
+    font-size: 85px;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info h3 {
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.price {
+    color: #0284c7;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.buy-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #0f172a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buy-btn:hover {
+    background: #0369a1;
+}
+
+/* CART */
+
+.cart {
+    max-width: 750px;
+    margin: 60px auto 0;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #0000000d;
+    text-align: left;
+}
+
+.cart h2 {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.cart-item small {
+    color: #64748b;
+}
+
+.remove-btn {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 14px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.checkout-btn:hover {
+    background: #15803d;
+}
+
+.empty {
+    color: #94a3b8;
+    padding: 15px 0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0f172a;
+    color: white;
+    padding: 40px 8%;
+    text-align: center;
+}
+
+footer h2 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 85px 6%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .cart {
+        padding: 20px;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="logo">ABDI STORE.</div>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#produk">Produk</a>
+        <a href="#keranjang">Keranjang 🛒</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+
+<div class="hero" id="beranda">
+
+    <h1>
+        Belanja Mudah,<br>
+        <span>Gaya Lebih Modern.</span>
+    </h1>
+
+    <p>
+        Temukan produk pilihan dengan kualitas terbaik
+        dan pengalaman belanja yang nyaman.
+    </p>
+
+    <a href="#produk" class="btn">
+        Mulai Belanja →
+    </a>
+
+</div>
+
+<!-- BENEFITS -->
+
+<div class="benefits">
+
+    <div class="benefit">
+        <h3>📦 Produk Pilihan</h3>
+        <p>Koleksi produk berkualitas.</p>
+    </div>
+
+    <div class="benefit">
+        <h3>🛒 Belanja Praktis</h3>
+        <p>Pemesanan mudah dan cepat.</p>
+    </div>
+
+    <div class="benefit">
+        <h3>💬 Layanan Pelanggan</h3>
+        <p>Konsultasi melalui WhatsApp.</p>
+    </div>
+
+</div>
+
+<!-- PRODUCTS -->
+
+<section id="produk">
+
+    <h2 class="section-title">Produk Pilihan</h2>
+
+    <p class="section-desc">
+        Temukan produk favorit Anda di ABDI STORE.
+    </p>
+
+    <div class="products">
+
+        <div class="product-card">
+
+            <div class="product-image">👕</div>
+
+            <div class="product-info">
+
+                <h3>Kaos Premium</h3>
+
+                <p>
+                    Kaos nyaman untuk aktivitas sehari-hari.
+                </p>
+
+                <div class="price">Rp 85.000</div>
+
+                <button class="buy-btn"
+                onclick="addCart('Kaos Premium',85000)">
+                    + Tambah ke Keranjang
+                </button>
+
+            </div>
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image">👟</div>
+
+            <div class="product-info">
+
+                <h3>Sepatu Casual</h3>
+
+                <p>
+                    Sepatu modern untuk aktivitas harian.
+                </p>
+
+                <div class="price">Rp 175.000</div>
+
+                <button class="buy-btn"
+                onclick="addCart('Sepatu Casual',175000)">
+                    + Tambah ke Keranjang
+                </button>
+
+            </div>
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image">🎒</div>
+
+            <div class="product-info">
+
+                <h3>Tas Modern</h3>
+
+                <p>
+                    Tas praktis untuk berbagai kegiatan.
+                </p>
+
+                <div class="price">Rp 120.000</div>
+
+                <button class="buy-btn"
+                onclick="addCart('Tas Modern',120000)">
+                    + Tambah ke Keranjang
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CART -->
+
+    <div class="cart" id="keranjang">
+
+        <h2>🛒 Keranjang Belanja</h2>
+
+        <div id="cart-items">
+            <p class="empty">
+                Belum ada produk di keranjang.
+            </p>
+        </div>
+
+        <div class="cart-total">
+            <span>Total</span>
+            <span id="total">Rp 0</span>
+        </div>
+
+        <button class="checkout-btn"
+        onclick="checkout()">
+            Checkout melalui WhatsApp
+        </button>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>ABDI STORE.</h2>
+
+    <p>
+        Belanja mudah, praktis, dan nyaman.
+    </p>
+
+    <p>
+        © 2026 ABDI STORE. All Rights Reserved.
+    </p>
+
+    <p>
+        Website Demo by ABDIWEB
+    </p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+let items = [];
+
+const nomorWhatsApp = "6281281234840";
+
+function formatRupiah(angka) {
+    return "Rp " + angka.toLocaleString("id-ID");
+}
+
+function addCart(name, price) {
+
+    const existing = items.find(item => item.name === name);
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        items.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+    }
+
+    renderCart();
+}
+
+function renderCart() {
+
+    const cartItems = document.getElementById("cart-items");
+
+    let total = 0;
+
+    if (items.length === 0) {
+
+        cartItems.innerHTML =
+        '<p class="empty">Belum ada produk di keranjang.</p>';
+
+        document.getElementById("total").innerText = "Rp 0";
+
+        return;
+    }
+
+    cartItems.innerHTML = items.map((item, index) => {
+
+        const subtotal = item.price * item.quantity;
+
+        total += subtotal;
+
+        return `
+        <div class="cart-item">
+
+            <div>
+                <strong>${item.name}</strong><br>
+                <small>
+                    ${item.quantity} x ${formatRupiah(item.price)}
+                </small>
+            </div>
+
+            <strong>${formatRupiah(subtotal)}</strong>
+
+            <button class="remove-btn"
+            onclick="removeCart(${index})">
+                Hapus
+            </button>
+
+        </div>
+        `;
+
+    }).join("");
+
+    document.getElementById("total").innerText =
+    formatRupiah(total);
+}
+
+function removeCart(index) {
+
+    items.splice(index, 1);
+
+    renderCart();
+}
+
+function checkout() {
+
+    if (items.length === 0) {
+
+        alert("Keranjang belanja masih kosong!");
+
+        return;
+    }
+
+    let total = 0;
+
+    let pesan =
+    "Halo ABDI STORE, saya ingin memesan produk berikut:\n\n";
+
+    items.forEach((item, index) => {
+
+        const subtotal = item.price * item.quantity;
+
+        total += subtotal;
+
+        pesan +=
+        (index + 1) + ". " +
+        item.name +
+        "\nJumlah: " + item.quantity +
+        "\nHarga: " + formatRupiah(item.price) +
+        "\nSubtotal: " + formatRupiah(subtotal) +
+        "\n\n";
+
+    });
+
+    pesan +=
+    "TOTAL PEMBAYARAN: " +
+    formatRupiah(total);
+
+    pesan += "\n\nMohon informasi cara pemesanannya. Terima kasih.";
+
+    const url =
+    "https://wa.me/" +
+    nomorWhatsApp +
+    "?text=" +
+    encodeURIComponent(pesan);
+
+    window.open(url, "_blank");
+}
+
+</script>
+
+</body>
+</html>

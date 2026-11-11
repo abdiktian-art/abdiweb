@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Kenali ABDIWEB, layanan pembuatan website modern, profesional, dan responsif untuk mengembangkan bisnis Anda.">
+
+    <title>Tentang Kami | ABDIWEB</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: #1e293b;
+            line-height: 1.7;
+            background: #ffffff;
+        }
+
+        /* HEADER */
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 17px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px #00000025;
+        }
+
+        header h2 {
+            color: #38bdf8;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 7px 10px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 430px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 90px 20px;
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(15, 23, 42, 0.82),
+                    rgba(3, 105, 161, 0.78)
+                ),
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-label {
+            color: #7dd3fc;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            line-height: 1.2;
+            margin: 18px 0;
+        }
+
+        .hero p {
+            color: #e2e8f0;
+            font-size: 17px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* SECTION UMUM */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .section-title span {
+            color: #0284c7;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            color: #0f172a;
+            font-size: 32px;
+            margin: 8px 0 12px;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        /* TENTANG KAMI */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px #0f172a20;
+        }
+
+        .about-content span {
+            color: #0284c7;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .about-content h2 {
+            font-size: 32px;
+            color: #0f172a;
+            line-height: 1.3;
+            margin: 12px 0 20px;
+        }
+
+        .about-content p {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .about-points {
+            margin-top: 20px;
+        }
+
+        .about-points p {
+            color: #334155;
+            margin-bottom: 8px;
+        }
+
+        /* LAYANAN */
+        .services {
+            background: #f1f5f9;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px #0f172a0c;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px #0f172a18;
+        }
+
+        .card-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 18px;
+            border-radius: 15px;
+            background: #e0f2fe;
+            color: #0369a1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+        }
+
+        .card h3 {
+            color: #0f172a;
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* VISI MISI */
+        .vision {
+            background:
+                linear-gradient(135deg, #e0f2fe, #f8fafc);
+        }
+
+        .vision-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .vision-card {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            border-left: 5px solid #0284c7;
+            box-shadow: 0 5px 20px #0f172a0c;
+        }
+
+        .vision-card h3 {
+            color: #0369a1;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .vision-card p {
+            color: #64748b;
+        }
+
+        /* KEUNGGULAN */
+        .advantages {
+            background: white;
+        }
+
+        .advantage-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .advantage-card {
+            padding: 25px;
+            border-radius: 14px;
+            background: #f8fafc;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .advantage-card h3 {
+            color: #0369a1;
+            margin-bottom: 10px;
+        }
+
+        .advantage-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* KONTAK */
+        .contact {
+            text-align: center;
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(15, 23, 42, 0.9),
+                    rgba(3, 105, 161, 0.9)
+                ),
+                url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contact h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            color: #e2e8f0;
+            margin-bottom: 25px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-button:hover {
+            background: #7dd3fc;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #020617;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: #38bdf8;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-image img {
+                height: 320px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+                padding: 15px 5%;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 12px;
+                margin: 0;
+                padding: 5px 7px;
+            }
+
+            .hero {
+                min-height: 350px;
+                padding: 70px 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .section-title h2,
+            .about-content h2 {
+                font-size: 27px;
+            }
+
+            .container,
+            .vision-container,
+            .advantage-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 250px;
+            }
+
+            .vision-card {
+                padding: 25px;
+            }
+
+            .contact h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h2>ABDIWEB</h2>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#visi">Visi Misi</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <span class="hero-label">Mengenal ABDIWEB</span>
+
+        <h1>Membangun Masa Depan Bisnis Melalui Teknologi Digital</h1>
+
+        <p>
+            Kami menghadirkan solusi website modern dan profesional
+            untuk membantu bisnis membangun identitas digital,
+            menjangkau lebih banyak pelanggan, dan berkembang.
+        </p>
+    </div>
+</div>
+
+<!-- TENTANG KAMI -->
+<section id="tentang">
+
+    <div class="about">
+
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"
+                alt="Suasana ruang kerja modern"
+            >
+        </div>
+
+        <div class="about-content">
+
+            <span>TENTANG PERUSAHAAN</span>
+
+            <h2>Solusi Digital untuk Kebutuhan Bisnis Anda</h2>
+
+            <p>
+                ABDIWEB adalah layanan pengembangan website
+                yang berkomitmen menghadirkan solusi digital
+                berkualitas, modern, dan mudah digunakan.
+            </p>
+
+            <p>
+                Kami membantu individu, pelaku UMKM, dan perusahaan
+                membangun kehadiran online melalui website yang
+                dirancang sesuai kebutuhan dan karakter bisnis.
+            </p>
+
+            <div class="about-points">
+                <p>✓ Desain modern dan profesional</p>
+                <p>✓ Tampilan responsif untuk berbagai perangkat</p>
+                <p>✓ Struktur website yang mudah digunakan</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LAYANAN -->
+<section class="services" id="layanan">
+
+    <div class="section-title">
+        <span>LAYANAN KAMI</span>
+        <h2>Solusi Website untuk Berbagai Kebutuhan</h2>
+        <p>
+            Kami menyediakan layanan pembuatan website
+            yang dapat disesuaikan dengan kebutuhan bisnis Anda.
+        </p>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="card-icon">🌐</div>
+            <h3>Landing Page</h3>
+            <p>
+                Website promosi yang dirancang untuk
+                memperkenalkan produk, jasa, dan bisnis Anda.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🏢</div>
+            <h3>Company Profile</h3>
+            <p>
+                Website profesional untuk menampilkan
+                profil, layanan, dan informasi perusahaan.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🛒</div>
+            <h3>Toko Online</h3>
+            <p>
+                Website katalog produk untuk membantu
+                pelanggan melihat dan memesan produk.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🍽️</div>
+            <h3>Website Restoran</h3>
+            <p>
+                Website untuk menampilkan menu, informasi,
+                dan layanan pemesanan restoran.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VISI MISI -->
+<section class="vision" id="visi">
+
+    <div class="section-title">
+        <span>ARAH DAN TUJUAN</span>
+        <h2>Visi dan Misi ABDIWEB</h2>
+        <p>
+            Komitmen kami dalam menghadirkan solusi
+            digital yang bermanfaat dan berkualitas.
+        </p>
+    </div>
+
+    <div class="vision-container">
+
+        <div class="vision-card">
+            <h3>Visi</h3>
+            <p>
+                Menjadi penyedia layanan pengembangan website
+                yang inovatif, terpercaya, dan mampu membantu
+                berbagai jenis bisnis berkembang di era digital.
+            </p>
+        </div>
+
+        <div class="vision-card">
+            <h3>Misi</h3>
+            <p>
+                Menghadirkan website berkualitas dengan desain
+                modern, teknologi yang sesuai kebutuhan,
+                tampilan responsif, serta pelayanan yang
+                mengutamakan kepuasan pelanggan.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- KEUNGGULAN -->
+<section class="advantages">
+
+    <div class="section-title">
+        <span>MENGAPA ABDIWEB?</span>
+        <h2>Komitmen dalam Setiap Proyek</h2>
+        <p>
+            Kami berusaha memberikan pengalaman
+            pengembangan website yang nyaman dan profesional.
+        </p>
+    </div>
+
+    <div class="advantage-container">
+
+        <div class="advantage-card">
+            <h3>Desain Modern</h3>
+            <p>
+                Tampilan website dirancang agar menarik,
+                rapi, dan sesuai dengan identitas bisnis.
+            </p>
+        </div>
+
+        <div class="advantage-card">
+            <h3>Responsif</h3>
+            <p>
+                Website disesuaikan agar nyaman diakses
+                melalui laptop, tablet, maupun handphone.
+            </p>
+        </div>
+
+        <div class="advantage-card">
+            <h3>Sesuai Kebutuhan</h3>
+            <p>
+                Struktur dan fitur website disesuaikan
+                dengan tujuan serta kebutuhan pelanggan.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- KONTAK -->
+<section class="contact" id="kontak">
+
+    <h2>Siap Mengembangkan Bisnis Anda?</h2>
+
+    <p>
+        Wujudkan kehadiran digital bisnis Anda bersama ABDIWEB.
+        Mari diskusikan kebutuhan website Anda.
+    </p>
+
+    <a
+        href="https://wa.me/6281281234840?text=Halo%20ABDIWEB,%20saya%20ingin%20berkonsultasi%20mengenai%20pembuatan%20website."
+        class="contact-button"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Konsultasi Sekarang
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        © 2026 <span>ABDIWEB</span>.
+        Semua Hak Dilindungi.
+    </p>
+</footer>
+
+</body>
+</html>
